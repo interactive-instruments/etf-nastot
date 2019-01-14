@@ -78,16 +78,16 @@ die:
 
 ```xml
 <supportedTestObjectTypes>
-  <!-- AX_Bestandsdatenauszug GID 6.0 -->
-  <testObjectType ref="da30143e-287b-407e-8e9e-e0b6cad8b50d"/>
+<!-- AX_Bestandsdatenauszug GID 6.0 -->
+<testObjectType ref="da30143e-287b-407e-8e9e-e0b6cad8b50d"/>
 
-  <!-- AX_NutzerbezogeneBestandsdatenaktualisierung_NBA GID 6.0 -->
-  <testObjectType ref="4a6cb92b-0cf4-45ce-b70c-2744a2335edf"/>
-  <!-- AX_NutzerbezogeneBestandsdatenaktualisierung_NBA GID 7.0 -->
-  <testObjectType ref="442dee4b-772a-495a-a321-6f4956312f47"/>
+<!-- AX_NutzerbezogeneBestandsdatenaktualisierung_NBA GID 6.0 -->
+<testObjectType ref="4a6cb92b-0cf4-45ce-b70c-2744a2335edf"/>
+<!-- AX_NutzerbezogeneBestandsdatenaktualisierung_NBA GID 7.0 -->
+<testObjectType ref="442dee4b-772a-495a-a321-6f4956312f47"/>
 
-  <!-- AX_Einrichtungsauftrag, versionsunabhängig -->
-  <testObjectType ref="ad0f79a2-6274-434b-acdc-72488ba569ec"/>
+<!-- AX_Einrichtungsauftrag, versionsunabhängig -->
+<testObjectType ref="ad0f79a2-6274-434b-acdc-72488ba569ec"/>
 </supportedTestObjectTypes>
 ```
 
