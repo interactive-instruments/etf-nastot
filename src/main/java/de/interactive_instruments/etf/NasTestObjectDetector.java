@@ -38,6 +38,11 @@ import de.interactive_instruments.etf.model.EidMap;
 public class NasTestObjectDetector extends StdTestObjectDetector {
 
     @Override
+    public int getPriority() {
+        return 50;
+    }
+
+    @Override
     public EidMap<TestObjectTypeDto> supportedTypes() {
         return NasTestObjectTypes.types;
     }

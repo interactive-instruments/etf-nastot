@@ -4,7 +4,7 @@ __etf-nastot - NAS ETF Test Object Type definitions and type detection extension
 
 [![European Union Public Licence 1.2](https://img.shields.io/badge/license-EUPL%201.2-blue.svg)](https://joinup.ec.europa.eu/software/page/eupl)
 
-&copy; 2018 interactive instruments. Licensed under the EUPL.
+&copy; 2018-2019 interactive instruments. Licensed under the EUPL.
 
 ## Testobjekttypen
 
