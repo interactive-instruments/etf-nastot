@@ -170,13 +170,13 @@ public class NasTestObjectTypes {
                     put(BESTANDSDATENAUSZUG_7_ID, BESTANDSDATENAUSZUG_7_TOT);
                 }
                 {
-                    BESTANDSDATENAUSZUG_7_1_TOT.setLabel("Bestandsdatenauszug GeoInfoDok 7.1");
+                    BESTANDSDATENAUSZUG_7_1_TOT.setLabel("Bestandsdatenauszug AAA-AS 7.1");
                     BESTANDSDATENAUSZUG_7_1_TOT.setId(BESTANDSDATENAUSZUG_7_1_ID);
                     BESTANDSDATENAUSZUG_7_1_TOT.setParent(BESTANDSDATENAUSZUG_TOT);
                     BESTANDSDATENAUSZUG_7_1_TOT
                             .setDescription("Enthält ALKIS-Bestandsdaten "
                                     + "inklusive der Zusatzdaten (z.B. Präsentationsobjekte) in "
-                                    + "objektstrukturierter Form, gemäß der GeoInfoDok Version 7.1");
+                                    + "objektstrukturierter Form, gemäß dem AAA-AS 7.1");
                     BESTANDSDATENAUSZUG_7_1_TOT.setDetectionExpression(rootElementCheck(
                             "AX_Bestandsdatenauszug", GID_7_1_NS),
                             ExpressionType.XPATH);
@@ -223,12 +223,12 @@ public class NasTestObjectTypes {
                     put(EINRICHTUNGSAUFTRAG_7_ID, EINRICHTUNGSAUFTRAG_7_TOT);
                 }
                 {
-                    EINRICHTUNGSAUFTRAG_7_1_TOT.setLabel("Einrichtungsauftrag GeoInfoDok 7.1");
+                    EINRICHTUNGSAUFTRAG_7_1_TOT.setLabel("Einrichtungsauftrag AAA-AS 7.1");
                     EINRICHTUNGSAUFTRAG_7_1_TOT.setId(EINRICHTUNGSAUFTRAG_7_1_ID);
                     EINRICHTUNGSAUFTRAG_7_1_TOT.setParent(EINRICHTUNGSAUFTRAG_TOT);
                     EINRICHTUNGSAUFTRAG_7_1_TOT
                             .setDescription("Steuerung des Verfahrens der "
-                                    + "Migration von GeoInfoDok 7.1-konformen Daten in der "
+                                    + "Migration von AAA-AS 7.1-konformen Daten in der "
                                     + "ALKIS-Führungskomponente");
                     EINRICHTUNGSAUFTRAG_7_1_TOT.setDetectionExpression(rootElementCheck(
                             "AX_Einrichtungsauftrag", GID_7_1_NS),
@@ -236,7 +236,7 @@ public class NasTestObjectTypes {
                     put(EINRICHTUNGSAUFTRAG_7_1_ID, EINRICHTUNGSAUFTRAG_7_1_TOT);
                 }
 
-                // Einrichtungsauftrag
+                // Fortfuehrungsauftrag
                 {
                     FORTFUEHRUNGSAUFTRAG_TOT.setLabel("Fortführungsauftrag");
                     FORTFUEHRUNGSAUFTRAG_TOT.setId(FORTFUEHRUNGSAUFTRAG_ID);
@@ -258,10 +258,10 @@ public class NasTestObjectTypes {
                     FORTFUEHRUNGSAUFTRAG_6_TOT
                             .setDescription(
                                     "Fortführungsauftrag in GeoInfoDok 6.0");
-                    EINRICHTUNGSAUFTRAG_6_TOT.setDetectionExpression(rootElementCheck(
+                    FORTFUEHRUNGSAUFTRAG_6_TOT.setDetectionExpression(rootElementCheck(
                             "AX_Fortfuehrungsauftrag", GID_6_NS),
                             ExpressionType.XPATH);
-                    put(EINRICHTUNGSAUFTRAG_6_ID, EINRICHTUNGSAUFTRAG_6_TOT);
+                    put(FORTFUEHRUNGSAUFTRAG_6_ID, FORTFUEHRUNGSAUFTRAG_6_TOT);
                 }
                 {
                     FORTFUEHRUNGSAUFTRAG_7_TOT.setLabel("Fortführungsauftrag GeoInfoDok 7.0");
@@ -276,12 +276,12 @@ public class NasTestObjectTypes {
                     put(FORTFUEHRUNGSAUFTRAG_7_ID, FORTFUEHRUNGSAUFTRAG_7_TOT);
                 }
                 {
-                    FORTFUEHRUNGSAUFTRAG_7_1_TOT.setLabel("Fortführungsauftrag GeoInfoDok 7.1");
+                    FORTFUEHRUNGSAUFTRAG_7_1_TOT.setLabel("Fortführungsauftrag AAA-AS 7.1");
                     FORTFUEHRUNGSAUFTRAG_7_1_TOT.setId(FORTFUEHRUNGSAUFTRAG_7_1_ID);
                     FORTFUEHRUNGSAUFTRAG_7_1_TOT.setParent(FORTFUEHRUNGSAUFTRAG_TOT);
                     FORTFUEHRUNGSAUFTRAG_7_1_TOT
                             .setDescription(
-                                    "Fortführungsauftrag in GeoInfoDok 7.1");
+                                    "Fortführungsauftrag in AAA-AS 7.1");
                     FORTFUEHRUNGSAUFTRAG_7_1_TOT.setDetectionExpression(rootElementCheck(
                             "AX_Fortfuehrungsauftrag", GID_7_1_NS),
                             ExpressionType.XPATH);
@@ -336,13 +336,13 @@ public class NasTestObjectTypes {
                 }
                 {
                     NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_7_1_TOT.setLabel(
-                            "Nutzerbezogene Bestandsdatenaktualisierung (NBA) GeoInfoDok 7.1");
+                            "Nutzerbezogene Bestandsdatenaktualisierung (NBA) AAA-AS 7.1");
                     NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_7_1_TOT.setId(NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_7_1_ID);
                     NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_7_1_TOT
                             .setParent(NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_TOT);
                     NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_7_1_TOT
                             .setDescription("Fortführungsfallbezogen Änderungsdaten und/oder"
-                                    + "stichtagsbezogen Differenzdaten gemäß der GeoInfoDok 7.1");
+                                    + "stichtagsbezogen Differenzdaten gemäß dem AAA-AS 7.1");
                     NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_7_1_TOT.setDetectionExpression(
                             rootElementCheck(
                                     "AX_NutzerbezogeneBestandsdatenaktualisierung_NBA", GID_7_0_NS),
