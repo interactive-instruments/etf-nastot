@@ -236,7 +236,7 @@ public class NasTestObjectTypes {
                     put(EINRICHTUNGSAUFTRAG_7_1_ID, EINRICHTUNGSAUFTRAG_7_1_TOT);
                 }
 
-                // Einrichtungsauftrag
+                // Fortfuehrungsauftrag
                 {
                     FORTFUEHRUNGSAUFTRAG_TOT.setLabel("Fortführungsauftrag");
                     FORTFUEHRUNGSAUFTRAG_TOT.setId(FORTFUEHRUNGSAUFTRAG_ID);
@@ -258,10 +258,10 @@ public class NasTestObjectTypes {
                     FORTFUEHRUNGSAUFTRAG_6_TOT
                             .setDescription(
                                     "Fortführungsauftrag in GeoInfoDok 6.0");
-                    EINRICHTUNGSAUFTRAG_6_TOT.setDetectionExpression(rootElementCheck(
+                    FORTFUEHRUNGSAUFTRAG_6_TOT.setDetectionExpression(rootElementCheck(
                             "AX_Fortfuehrungsauftrag", GID_6_NS),
                             ExpressionType.XPATH);
-                    put(EINRICHTUNGSAUFTRAG_6_ID, EINRICHTUNGSAUFTRAG_6_TOT);
+                    put(FORTFUEHRUNGSAUFTRAG_6_ID, FORTFUEHRUNGSAUFTRAG_6_TOT);
                 }
                 {
                     FORTFUEHRUNGSAUFTRAG_7_TOT.setLabel("Fortführungsauftrag GeoInfoDok 7.0");
