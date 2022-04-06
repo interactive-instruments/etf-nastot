@@ -26,17 +26,17 @@ import de.interactive_instruments.etf.detector.TestObjectTypeNotDetected;
 import de.interactive_instruments.etf.model.capabilities.LocalResource;
 import de.interactive_instruments.etf.model.capabilities.Resource;
 import de.interactive_instruments.exceptions.ObjectWithIdNotFoundException;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@TestMethodOrder(MethodOrderer.Alphanumeric.class)
 public class NasTestObjectTypeDetectorTest {
 
 	@Test
@@ -191,14 +191,16 @@ public class NasTestObjectTypeDetectorTest {
 		fail("Exception expected");
 	}
 
-	@Test(expected = TestObjectTypeNotDetected.class)
-	public void test17_unknown() throws URISyntaxException, IOException, TestObjectTypeNotDetected, ObjectWithIdNotFoundException, IncompatibleTestObjectTypeException {
-		final DetectedTestObjectType detectedType = TestObjectTypeDetectorManager.detect(
-				Resource.create("test",
-						new URI("https://www.interactive-instruments.de")));
+	@Test
+	public void test17_unknown() throws TestObjectTypeNotDetected {
+        assertThrows(TestObjectTypeNotDetected.class, () -> {
+            final DetectedTestObjectType detectedType = TestObjectTypeDetectorManager.detect(
+                Resource.create("test",
+                    new URI("https://www.interactive-instruments.de")));
+        });
 	}
 
-	@Test
+
 	public void test17_cache() throws URISyntaxException, IOException, TestObjectTypeNotDetected, ObjectWithIdNotFoundException, IncompatibleTestObjectTypeException {
 		test11_Wfs20();
 		test11_Wfs20();
@@ -230,7 +232,7 @@ public class NasTestObjectTypeDetectorTest {
 		assertEquals("3e3639b1-f6b7-4d62-9160-963cfb2ea300", detectedType.getId().toString());
 	}
 
-	@Test
+
 	public void test22_Wfs20FeatureCollectionFile() throws URISyntaxException, IOException, TestObjectTypeNotDetected {
 		final IFile tmpDir = IFile.createTempDir("etf_junit");
 		final IFile file = UriUtils.download(new URI("https://www.dropbox.com/s/uewjg48vq4owwlb/ps-ro-50.zip?dl=1"));
@@ -241,7 +243,7 @@ public class NasTestObjectTypeDetectorTest {
 		assertEquals("a8a1b437-0ebf-454c-8204-bcf0b8548d8c", detectedType.getId().toString());
 	}
 
-	@Test
+
 	public void test23_Wfs20FeatureCollectionFileWithExpectedType() throws URISyntaxException, IOException, TestObjectTypeNotDetected,
 			ObjectWithIdNotFoundException, IncompatibleTestObjectTypeException {
 		final IFile tmpDir = IFile.createTempDir("etf_junit");
@@ -254,7 +256,7 @@ public class NasTestObjectTypeDetectorTest {
 		assertEquals("a8a1b437-0ebf-454c-8204-bcf0b8548d8c", detectedType.getId().toString());
 	}
 
-	@Test
+
 	public void test24_Bestandsdatenauszug_6() throws URISyntaxException, IOException, TestObjectTypeNotDetected,
 			ObjectWithIdNotFoundException, IncompatibleTestObjectTypeException {
 		final DetectedTestObjectType detectedType = TestObjectTypeDetectorManager.detect(
@@ -265,7 +267,7 @@ public class NasTestObjectTypeDetectorTest {
 		assertEquals("ad60a868-2a95-4f4e-8875-6b06b7acba15", detectedType.getParent().getId().toString());
 	}
 
-	@Test
+
 	public void test24_NutzerbezogeneBestandsdatenaktualisierung_NBA_6() throws URISyntaxException, IOException, TestObjectTypeNotDetected,
 			ObjectWithIdNotFoundException, IncompatibleTestObjectTypeException {
 		final DetectedTestObjectType detectedType = TestObjectTypeDetectorManager.detect(

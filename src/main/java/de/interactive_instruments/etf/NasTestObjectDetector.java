@@ -1,5 +1,6 @@
 /**
- * Copyright 2017-2019 European Union
+ * Copyright 2017-2020 European Union
+ *
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by
  * the European Commission - subsequent versions of the EUPL (the "Licence");
  * You may not use this work except in compliance with the Licence.
@@ -28,7 +29,8 @@ import de.interactive_instruments.etf.model.EidMap;
 /**
  * Standard detector for Test Object Types.
  *
- * The standard detector takes xpath expressions for detecting the test object types, and checks for matches in XML files. As the jdk xpath engine is very slow and memory hungry, the XMLDog engine which is based on Sax is used.
+ * The standard detector takes xpath expressions for detecting the test object types, and checks for matches in XML
+ * files. As the jdk xpath engine is very slow and memory hungry, the XMLDog engine which is based on Sax is used.
  *
  * Note: Only a subset of XPath 1.0 is supported https://github.com/santhosh-tekuri/jlibs/wiki/XMLDog
  *
