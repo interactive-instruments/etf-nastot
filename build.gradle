@@ -7,18 +7,17 @@
 buildscript {
 	repositories {
 		maven {
-			url "http://services.interactive-instruments.de/etfdev-af/plugins-releases-local"
+			url "https://af.etf.interactive-instruments.de/repository/gradle-plugins"
 			credentials {
-				// Our repository requires authenticating
 				username 'ii-bda'
 				password 'AP7mb4WA6F1ckdZkaE8Qx8GSowt'
 			}}
 	}
 	dependencies {
-		classpath group: 'de.interactive_instruments.bda', name: 'etf-bda', version: '[2.0.3,2.0.99]'
+		classpath group: 'de.interactive_instruments.bda', name: 'etf-bda', version: '[2.0.29,2.0.99]'
 	}
 	dependencies {
-		ant.unjar src: configurations.classpath.files.find {it.path.contains('etf')}, dest: 'build/gradle'
+		ant.unjar src: configurations.classpath.files.find { it.path.contains('etf') }, dest: 'build/gradle'
 	}
 }
 apply from: 'build/gradle/ii-bda.gradle'
@@ -29,11 +28,14 @@ group = 'de.interactive_instruments.etf'
 description = 'NAS Test Object Types'
 
 dependencies {
-	compile group: 'de.interactive_instruments', name: 'ii-commons-util', version:'3.2.0'+project.snapshotSuffix
-	compile group: 'de.interactive_instruments.etf', name: 'etf-core', version:'2.0.0'+project.snapshotSuffix
-	compile group: 'de.interactive_instruments.etf', name: 'etf-stdtot', version: '1.1.0' + project.snapshotSuffix
+	compileOnly group: 'de.interactive_instruments', name: 'ii-commons-util', version:'3.2.0'+project.snapshotSuffix
+	compileOnly group: 'de.interactive_instruments.etf', name: 'etf-core', version:'2.0.0'+project.snapshotSuffix
+	compileOnly group: 'de.interactive_instruments.etf', name: 'etf-stdtot', version: '1.1.0' + project.snapshotSuffix
 
     // Testing
+	testImplementation group: 'de.interactive_instruments', name: 'ii-commons-util', version:'3.2.0'+project.snapshotSuffix
+	testImplementation group: 'de.interactive_instruments.etf', name: 'etf-core', version:'2.0.0'+project.snapshotSuffix
+	testImplementation group: 'de.interactive_instruments.etf', name: 'etf-stdtot', version: '1.1.0' + project.snapshotSuffix
 	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: etf_junitTestVersion
 	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: etf_junitTestVersion
 	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: etf_junitTestVersion

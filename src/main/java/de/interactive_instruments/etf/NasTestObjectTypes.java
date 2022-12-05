@@ -346,7 +346,7 @@ public class NasTestObjectTypes {
                                     + "stichtagsbezogen Differenzdaten gemäß dem AAA-AS 7.1");
                     NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_7_1_TOT.setDetectionExpression(
                             rootElementCheck(
-                                    "AX_NutzerbezogeneBestandsdatenaktualisierung_NBA", GID_7_0_NS),
+                                    "AX_NutzerbezogeneBestandsdatenaktualisierung_NBA", GID_7_1_NS),
                             ExpressionType.XPATH);
                     put(NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_7_1_ID,
                             NUTZERBEZOGENE_BESTANDSDATENAKTUALISIERUNG_7_1_TOT);
